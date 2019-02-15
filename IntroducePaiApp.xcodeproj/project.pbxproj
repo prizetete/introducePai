@@ -22,6 +22,12 @@
 		672840F52204272800A47DE1 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840ED2204272800A47DE1 /* CalculatorController.swift */; };
 		672840F62204272800A47DE1 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840EE2204272800A47DE1 /* CustomView.swift */; };
 		672840F82204276000A47DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672840F72204275F00A47DE1 /* Main.storyboard */; };
+		672840FA22043E0600A47DE1 /* APIDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840F922043E0600A47DE1 /* APIDriver.swift */; };
+		67284100220ABD9E00A47DE1 /* ReorderableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840FF220ABD9E00A47DE1 /* ReorderableController.swift */; };
+		67284102220ABE4300A47DE1 /* ReorderableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67284101220ABE4300A47DE1 /* ReorderableCell.swift */; };
+		67C87A17220BECD80063396A /* sortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C87A16220BECD80063396A /* sortCell.swift */; };
+		67C87A19220C0EC70063396A /* TestSectionEditingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C87A18220C0EC70063396A /* TestSectionEditingController.swift */; };
+		67C87A1F2212AE2F0063396A /* HeaderForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C87A1E2212AE2E0063396A /* HeaderForCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +49,12 @@
 		672840ED2204272800A47DE1 /* CalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
 		672840EE2204272800A47DE1 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		672840F72204275F00A47DE1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		672840F922043E0600A47DE1 /* APIDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDriver.swift; sourceTree = "<group>"; };
+		672840FF220ABD9E00A47DE1 /* ReorderableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderableController.swift; sourceTree = "<group>"; };
+		67284101220ABE4300A47DE1 /* ReorderableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderableCell.swift; sourceTree = "<group>"; };
+		67C87A16220BECD80063396A /* sortCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortCell.swift; sourceTree = "<group>"; };
+		67C87A18220C0EC70063396A /* TestSectionEditingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSectionEditingController.swift; sourceTree = "<group>"; };
+		67C87A1E2212AE2E0063396A /* HeaderForCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForCollectionView.swift; sourceTree = "<group>"; };
 		9CB4475615EC9481AE02F0DF /* Pods-IntroducePaiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroducePaiApp.debug.xcconfig"; path = "Target Support Files/Pods-IntroducePaiApp/Pods-IntroducePaiApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +123,12 @@
 				672840E92204272700A47DE1 /* SettingController.swift */,
 				672840E82204272700A47DE1 /* TabbarController.swift */,
 				672840EB2204272800A47DE1 /* TestCustomViewController.swift */,
+				672840F922043E0600A47DE1 /* APIDriver.swift */,
+				672840FF220ABD9E00A47DE1 /* ReorderableController.swift */,
+				67284101220ABE4300A47DE1 /* ReorderableCell.swift */,
+				67C87A16220BECD80063396A /* sortCell.swift */,
+				67C87A18220C0EC70063396A /* TestSectionEditingController.swift */,
+				67C87A1E2212AE2E0063396A /* HeaderForCollectionView.swift */,
 			);
 			path = IntroducePaiApp;
 			sourceTree = "<group>";
@@ -235,10 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C87A17220BECD80063396A /* sortCell.swift in Sources */,
+				672840FA22043E0600A47DE1 /* APIDriver.swift in Sources */,
+				67C87A19220C0EC70063396A /* TestSectionEditingController.swift in Sources */,
 				672840F12204272800A47DE1 /* SettingController.swift in Sources */,
 				672840DB2204247900A47DE1 /* IntroducePaiApp.xcdatamodeld in Sources */,
 				672840EF2204272800A47DE1 /* CustomTableController.swift in Sources */,
 				672840F32204272800A47DE1 /* TestCustomViewController.swift in Sources */,
+				67C87A1F2212AE2F0063396A /* HeaderForCollectionView.swift in Sources */,
 				672840D52204247900A47DE1 /* ViewController.swift in Sources */,
 				672840F22204272800A47DE1 /* ProfileViewController.swift in Sources */,
 				672840F62204272800A47DE1 /* CustomView.swift in Sources */,
@@ -246,6 +268,8 @@
 				672840F52204272800A47DE1 /* CalculatorController.swift in Sources */,
 				672840F02204272800A47DE1 /* TabbarController.swift in Sources */,
 				672840D32204247900A47DE1 /* AppDelegate.swift in Sources */,
+				67284100220ABD9E00A47DE1 /* ReorderableController.swift in Sources */,
+				67284102220ABE4300A47DE1 /* ReorderableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

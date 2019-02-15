@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class CustomView: NSObject, UIGestureRecognizerDelegate {
     
@@ -14,6 +15,8 @@ class CustomView: NSObject, UIGestureRecognizerDelegate {
     //    private var mView: UIView!
     //    private var mTouchBar: UIView!
     //    private var mContentView: UIView!
+    private var oAPIDriver: APIDriver!
+    
     
     private var mBGBlack: UIView = {
         let mView = UIView()
@@ -56,6 +59,17 @@ class CustomView: NSObject, UIGestureRecognizerDelegate {
     
     override init() {
         super.init()
+        self.oAPIDriver = APIDriver()
+        self.oAPIDriver.setURL(sURL: "pts_search")
+        self.oAPIDriver.setParamenters(axParamenters: [
+            "keyword" : "topic",
+            "page" : 1
+        ])
+        self.oAPIDriver.getDataRetryMethod(Method: .post, callbackSuccess: { (axData) in
+            print(axData)
+        }) { (err) in
+            print("err: \(err)")
+        }
         //        self.mBGBlack = UIView()
         //        self.mView = UIView()
         //        self.mTouchBar = UIView()
@@ -144,7 +158,7 @@ class CustomView: NSObject, UIGestureRecognizerDelegate {
         let velocity = recognizer.velocity(in: self.mBGBlack)
         let fPosY = min(UIScreen.main.bounds.height, max(self.fHeightTop, self.mView.frame.origin.y + translation.y))
         
-        print("tran: \(translation.y), velocity: \(velocity.y), mView: \(self.mView.frame.origin.y)")
+        
         
         let fTotalTabHeight = UIScreen.main.bounds.height
         let fTabYPosChange = UIScreen.main.bounds.height - self.mView.frame.origin.y
@@ -181,7 +195,6 @@ class CustomView: NSObject, UIGestureRecognizerDelegate {
                 self.mCustomTable.mTableView.isScrollEnabled = false
                 self.mCustomTable.mTableView.bounces = false
             }
-            print(self.ePosition)
         case .ended:
             var progressYPositionAfterShortTime = abs(translation.y + velocity.y * 0.2) / self.mView.frame.height
             progressYPositionAfterShortTime = min(1, max(0, progressYPositionAfterShortTime))
