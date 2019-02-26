@@ -133,6 +133,8 @@
 		672840D12204247900A47DE1 /* IntroducePaiApp */ = {
 			isa = PBXGroup;
 			children = (
+				672840E12204247C00A47DE1 /* Info.plist */,
+				672840D92204247900A47DE1 /* IntroducePaiApp.xcdatamodeld */,
 				672E4C442224F8D0007D60E5 /* Config */,
 				671F23B2221AA1A70021DDCA /* Controller */,
 				6730B6812223E695003D82BF /* Model */,
@@ -148,8 +150,6 @@
 			children = (
 				672840D22204247900A47DE1 /* AppDelegate.swift */,
 				672840DC2204247C00A47DE1 /* Assets.xcassets */,
-				672840E12204247C00A47DE1 /* Info.plist */,
-				672840D92204247900A47DE1 /* IntroducePaiApp.xcdatamodeld */,
 			);
 			path = Config;
 			sourceTree = "<group>";
