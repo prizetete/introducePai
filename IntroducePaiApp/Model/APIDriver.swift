@@ -30,6 +30,10 @@ class APIDriver {
         self.sURL = self.sBASE_URL + sURL
     }
     
+    internal func setFullURL(sURL:String) {
+        self.sURL = sURL
+    }
+    
     internal func setParamenters(axParamenters: NSDictionary?) {
         self.axParamenters = axParamenters as? [String: Any]
     }

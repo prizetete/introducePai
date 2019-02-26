@@ -14,6 +14,7 @@ class ReorderableController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Reorder")
         self.view.backgroundColor = .red
         self.mCollection?.register(HeaderForCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,withReuseIdentifier: "HeaderForCollectionView")
     }

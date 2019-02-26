@@ -59,17 +59,31 @@ class CustomView: NSObject, UIGestureRecognizerDelegate {
     
     override init() {
         super.init()
+        //        self.oAPIDriver = APIDriver()
+        //        self.oAPIDriver.setURL(sURL: "pts_search")
+        //        self.oAPIDriver.setParamenters(axParamenters: [
+        //            "keyword" : "topic",
+        //            "page" : 1
+        //        ])
+        //        self.oAPIDriver.getDataRetryMethod(Method: .post, callbackSuccess: { (axData) in
+        //            print(axData)
+        //        }) { (err) in
+        //            print("err: \(err)")
+        //        }
+        
         self.oAPIDriver = APIDriver()
-        self.oAPIDriver.setURL(sURL: "pts_search")
-        self.oAPIDriver.setParamenters(axParamenters: [
-            "keyword" : "topic",
-            "page" : 1
-        ])
-        self.oAPIDriver.getDataRetryMethod(Method: .post, callbackSuccess: { (axData) in
-            print(axData)
+        self.oAPIDriver.setFullURL(sURL: "https://api.myjson.com/bins/ysiha")
+//        self.oAPIDriver.setParamenters(axParamenters: [
+////            "name": "morpheus",
+//            //            "job": "leader"
+//            :
+//        ])
+        self.oAPIDriver.getDataRetryMethod(Method: .get, callbackSuccess: { (axData) in
+            print("get Data: \(axData)")
         }) { (err) in
-            print("err: \(err)")
+            print("err ja: \(err)")
         }
+        
         //        self.mBGBlack = UIView()
         //        self.mView = UIView()
         //        self.mTouchBar = UIView()
@@ -167,17 +181,17 @@ class CustomView: NSObject, UIGestureRecognizerDelegate {
         switch recognizer.state {
         case .began:
             if fPercentPos > 75.0 {
-            self.ePosition = .top
-            self.mCustomTable.mTableView.isScrollEnabled = true
-            self.mCustomTable.mTableView.bounces = true
+                self.ePosition = .top
+                self.mCustomTable.mTableView.isScrollEnabled = true
+                self.mCustomTable.mTableView.bounces = true
             } else if fPercentPos > 30.0 {
-            self.ePosition = .mid
-            self.mCustomTable.mTableView.isScrollEnabled = false
-            self.mCustomTable.mTableView.bounces = false
+                self.ePosition = .mid
+                self.mCustomTable.mTableView.isScrollEnabled = false
+                self.mCustomTable.mTableView.bounces = false
             } else {
-            self.ePosition = .none
-            self.mCustomTable.mTableView.isScrollEnabled = false
-            self.mCustomTable.mTableView.bounces = false
+                self.ePosition = .none
+                self.mCustomTable.mTableView.isScrollEnabled = false
+                self.mCustomTable.mTableView.bounces = false
             }
         case .changed:
             self.mView.frame.origin.y = fPosY
@@ -198,21 +212,21 @@ class CustomView: NSObject, UIGestureRecognizerDelegate {
         case .ended:
             var progressYPositionAfterShortTime = abs(translation.y + velocity.y * 0.2) / self.mView.frame.height
             progressYPositionAfterShortTime = min(1, max(0, progressYPositionAfterShortTime))
-                if progressYPositionAfterShortTime > 0.5 {
-                    if velocity.y >= 0 {
-                        self.closeCustomView()
-                    } else {
-                        self.displayMenu()
-                    }
+            if progressYPositionAfterShortTime > 0.5 {
+                if velocity.y >= 0 {
+                    self.closeCustomView()
                 } else {
-                    if fPercentPos > 75.0 {
-                        self.displayMenu(bIsShowMid: false)
-                    } else if fPercentPos > 30.0 {
-                        self.displayMenu()
-                    } else {
-                        self.closeCustomView()
-                    }
+                    self.displayMenu()
                 }
+            } else {
+                if fPercentPos > 75.0 {
+                    self.displayMenu(bIsShowMid: false)
+                } else if fPercentPos > 30.0 {
+                    self.displayMenu()
+                } else {
+                    self.closeCustomView()
+                }
+            }
         default:
             break
         }
