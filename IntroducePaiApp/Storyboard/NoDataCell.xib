@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoDataCell" rowHeight="56" id="IaR-K6-e1U" customClass="NoDataCell" customModule="IntroducePaiApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IaR-K6-e1U" id="VAO-LD-KSK">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5u-hp-cnh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwc-g1-07W">
+                                <rect key="frame" x="8" y="17.5" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wwc-g1-07W" firstAttribute="centerX" secondItem="n5u-hp-cnh" secondAttribute="centerX" id="95d-Zb-04e"/>
+                            <constraint firstAttribute="trailing" secondItem="Wwc-g1-07W" secondAttribute="trailing" constant="8" id="Q1n-Ci-3jt"/>
+                            <constraint firstItem="Wwc-g1-07W" firstAttribute="leading" secondItem="n5u-hp-cnh" secondAttribute="leading" constant="8" id="XZl-25-5uG"/>
+                            <constraint firstItem="Wwc-g1-07W" firstAttribute="centerY" secondItem="n5u-hp-cnh" secondAttribute="centerY" id="kgR-H7-mOa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="n5u-hp-cnh" secondAttribute="trailing" id="3w9-e8-Lbz"/>
+                    <constraint firstItem="n5u-hp-cnh" firstAttribute="top" secondItem="VAO-LD-KSK" secondAttribute="top" id="cwc-sf-gpC"/>
+                    <constraint firstAttribute="bottom" secondItem="n5u-hp-cnh" secondAttribute="bottom" id="tcb-Og-sxC"/>
+                    <constraint firstItem="n5u-hp-cnh" firstAttribute="leading" secondItem="VAO-LD-KSK" secondAttribute="leading" id="xB8-jR-K1v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mLabel" destination="Wwc-g1-07W" id="7ON-Hf-Obr"/>
+                <outlet property="mView" destination="n5u-hp-cnh" id="SaG-ri-lRs"/>
+            </connections>
+            <point key="canvasLocation" x="-134" y="39"/>
+        </tableViewCell>
+    </objects>
+</document>

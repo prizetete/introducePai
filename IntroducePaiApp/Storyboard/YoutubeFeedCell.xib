@@ -85,11 +85,24 @@
                             <constraint firstItem="4JE-9n-VU9" firstAttribute="top" secondItem="50m-Jr-tEr" secondAttribute="top" constant="8" id="vM6-D0-Mpd"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-tt-RlJ">
+                        <rect key="frame" x="368" y="193" width="42" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Y34-4y-glH"/>
+                            <constraint firstAttribute="width" constant="42" id="drB-y3-EtJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="50m-Jr-tEr" firstAttribute="top" secondItem="vV3-tt-RlJ" secondAttribute="bottom" constant="36" id="34s-HT-gI6"/>
                     <constraint firstAttribute="bottom" secondItem="50m-Jr-tEr" secondAttribute="bottom" id="61K-QF-Pmh"/>
                     <constraint firstAttribute="trailing" secondItem="50m-Jr-tEr" secondAttribute="trailing" id="9ss-9k-jvf"/>
+                    <constraint firstAttribute="trailing" secondItem="vV3-tt-RlJ" secondAttribute="trailing" constant="8" id="CIv-Zk-3ie"/>
                     <constraint firstItem="50m-Jr-tEr" firstAttribute="top" secondItem="yU3-Zc-I2H" secondAttribute="bottom" id="EQn-6u-15w"/>
                     <constraint firstItem="yU3-Zc-I2H" firstAttribute="leading" secondItem="xgf-OR-Jfr" secondAttribute="leading" id="LSg-Qv-baH"/>
                     <constraint firstAttribute="trailing" secondItem="yU3-Zc-I2H" secondAttribute="trailing" id="jYl-sg-fHt"/>
@@ -101,9 +114,11 @@
                 <outlet property="mContentView" destination="pJr-Gq-Vyg" id="IVR-ld-DSF"/>
                 <outlet property="mCoverImage" destination="yU3-Zc-I2H" id="wKV-a7-zmi"/>
                 <outlet property="mDescLabel" destination="eab-wr-D7T" id="b3y-EU-KTR"/>
+                <outlet property="mOptionBtn" destination="4JE-9n-VU9" id="duG-65-mDY"/>
                 <outlet property="mProfileImgView" destination="ivG-WB-gen" id="teF-6C-3tn"/>
                 <outlet property="mProfileView" destination="50m-Jr-tEr" id="PjQ-rt-3fR"/>
                 <outlet property="mTitleLabel" destination="enM-sf-5yF" id="eys-KJ-oQQ"/>
+                <outlet property="mVDOTimeLabel" destination="vV3-tt-RlJ" id="DRs-lB-WVp"/>
             </connections>
             <point key="canvasLocation" x="-59.200000000000003" y="35.532233883058474"/>
         </tableViewCell>

@@ -433,9 +433,9 @@
                                         <rect key="frame" x="195.5" y="374.5" width="163.5" height="163.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyD-zc-8Um">
-                                                <rect key="frame" x="6.5" y="61.5" width="151" height="41"/>
+                                                <rect key="frame" x="7.5" y="61.5" width="149" height="41"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                <state key="normal" title="Coming Soon">
+                                                <state key="normal" title="Order Editing">
                                                     <color key="titleColor" red="1" green="0.54080232070000001" blue="0.76627634379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>

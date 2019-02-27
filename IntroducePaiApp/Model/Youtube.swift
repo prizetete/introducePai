@@ -24,7 +24,7 @@ class Youtube {
 //        }, callbackError: { (error) in
 //            callbackError?(error)
 //        })
-        self.oAPIDriver?.setFullURL(sURL: "https://api.myjson.com/bins/kfth6")
+        self.oAPIDriver?.setFullURL(sURL: "https://api.myjson.com/bins/o4pfe")
         self.oAPIDriver?.getDataRetryMethod(Method: .get, callbackSuccess: { (axData) in
 //            print("get Data: \(axData)")
             callbackSuccess!(axData)

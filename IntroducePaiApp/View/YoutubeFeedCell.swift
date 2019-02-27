@@ -16,6 +16,8 @@ class YoutubeFeedCell: UITableViewCell {
     @IBOutlet weak var mContentView: UIView!
     @IBOutlet weak var mTitleLabel: UILabel!
     @IBOutlet weak var mDescLabel: UILabel!
+    @IBOutlet weak var mVDOTimeLabel: UILabel!
+    @IBOutlet weak var mOptionBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +43,7 @@ class YoutubeFeedCell: UITableViewCell {
         
         self.mTitleLabel.font = UIFont.systemFont(ofSize: 16.0)
         self.mDescLabel.font = UIFont.systemFont(ofSize: 12.0)
+        self.mVDOTimeLabel.font = UIFont.systemFont(ofSize: 12.0)
         
         self.mTitleLabel.lineBreakMode = .byWordWrapping
         self.mTitleLabel.numberOfLines = 2
@@ -50,6 +53,10 @@ class YoutubeFeedCell: UITableViewCell {
         
         self.mProfileImgView.clipsToBounds = true
         self.mProfileImgView.layer.cornerRadius = 17.0
+        
+        self.mVDOTimeLabel.backgroundColor = UIColor.black.withAlphaComponent(0.75)
+        self.mVDOTimeLabel.textColor = UIColor.white
+        self.mVDOTimeLabel.textAlignment = .center
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

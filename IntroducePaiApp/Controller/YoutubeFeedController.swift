@@ -38,7 +38,6 @@ class YoutubeFeedController: UIViewController {
         self.mTableView.separatorInset = UIEdgeInsets.init(top: 0.0, left: 8.0, bottom: 0.0, right: 8.0)
         self.mTableView.separatorColor = UIColor.white.withAlphaComponent(0.25)
         self.mTableView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
-        
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.9)
     }
     
@@ -74,6 +73,7 @@ extension YoutubeFeedController: UITableViewDelegate, UITableViewDataSource {
         let urlCover = URL(string: oData.img_cover)
         cell.mCoverImage.kf.setImage(with: urlCover)
         
+        cell.mVDOTimeLabel.text = oData.limit_time
         return cell
     }
     
