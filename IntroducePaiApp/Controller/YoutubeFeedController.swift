@@ -74,6 +74,7 @@ extension YoutubeFeedController: UITableViewDelegate, UITableViewDataSource {
         cell.mCoverImage.kf.setImage(with: urlCover)
         
         cell.mVDOTimeLabel.text = oData.limit_time
+        cell.mVDOTimeLabel.layer.cornerRadius = 7.0
         return cell
     }
     

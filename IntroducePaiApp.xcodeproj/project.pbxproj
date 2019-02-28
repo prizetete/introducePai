@@ -28,6 +28,7 @@
 		672E4C482225197A007D60E5 /* PantipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E4C472225197A007D60E5 /* PantipViewModel.swift */; };
 		672E4C4A2226324B007D60E5 /* NoDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672E4C492226324B007D60E5 /* NoDataCell.xib */; };
 		672E4C4C2226325C007D60E5 /* NoDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E4C4B2226325C007D60E5 /* NoDataCell.swift */; };
+		672E4C722227961D007D60E5 /* WebViewContent.html in Resources */ = {isa = PBXBuildFile; fileRef = 672E4C712227961D007D60E5 /* WebViewContent.html */; };
 		6730B67B2223DDBC003D82BF /* YoutubeFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730B67A2223DDBC003D82BF /* YoutubeFeedController.swift */; };
 		6730B67D2223DEE5003D82BF /* YoutubeFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6730B67C2223DEE5003D82BF /* YoutubeFeedCell.xib */; };
 		6730B67F2223DF03003D82BF /* YoutubeFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730B67E2223DF03003D82BF /* YoutubeFeedCell.swift */; };
@@ -63,6 +64,7 @@
 		672E4C472225197A007D60E5 /* PantipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantipViewModel.swift; sourceTree = "<group>"; };
 		672E4C492226324B007D60E5 /* NoDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataCell.xib; sourceTree = "<group>"; };
 		672E4C4B2226325C007D60E5 /* NoDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataCell.swift; sourceTree = "<group>"; };
+		672E4C712227961D007D60E5 /* WebViewContent.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = WebViewContent.html; sourceTree = "<group>"; };
 		6730B67A2223DDBC003D82BF /* YoutubeFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeFeedController.swift; sourceTree = "<group>"; };
 		6730B67C2223DEE5003D82BF /* YoutubeFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutubeFeedCell.xib; sourceTree = "<group>"; };
 		6730B67E2223DF03003D82BF /* YoutubeFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeFeedCell.swift; sourceTree = "<group>"; };
@@ -143,23 +145,24 @@
 			children = (
 				672840E12204247C00A47DE1 /* Info.plist */,
 				672840D92204247900A47DE1 /* IntroducePaiApp.xcdatamodeld */,
-				672E4C442224F8D0007D60E5 /* Config */,
+				672E4C442224F8D0007D60E5 /* All */,
 				671F23B2221AA1A70021DDCA /* Controller */,
 				6730B6812223E695003D82BF /* Model */,
 				6730B6832223E6B6003D82BF /* Storyboard */,
 				6730B6822223E6AD003D82BF /* View */,
 				6730B6802223E687003D82BF /* ViewModel */,
+				672E4C712227961D007D60E5 /* WebViewContent.html */,
 			);
 			path = IntroducePaiApp;
 			sourceTree = "<group>";
 		};
-		672E4C442224F8D0007D60E5 /* Config */ = {
+		672E4C442224F8D0007D60E5 /* All */ = {
 			isa = PBXGroup;
 			children = (
 				672840D22204247900A47DE1 /* AppDelegate.swift */,
 				672840DC2204247C00A47DE1 /* Assets.xcassets */,
 			);
-			path = Config;
+			path = All;
 			sourceTree = "<group>";
 		};
 		6730B6802223E687003D82BF /* ViewModel */ = {
@@ -265,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672E4C722227961D007D60E5 /* WebViewContent.html in Resources */,
 				672840E02204247C00A47DE1 /* LaunchScreen.storyboard in Resources */,
 				6730B67D2223DEE5003D82BF /* YoutubeFeedCell.xib in Resources */,
 				672840DD2204247C00A47DE1 /* Assets.xcassets in Resources */,

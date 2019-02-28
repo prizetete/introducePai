@@ -673,23 +673,10 @@
                     <view key="view" contentMode="scaleToFill" id="NCX-OV-37c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGE-78-ZAV">
-                                <rect key="frame" x="155.5" y="318.5" width="64" height="30"/>
-                                <state key="normal" title="Click Me!"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="SGE-78-ZAV" firstAttribute="centerY" secondItem="NCX-OV-37c" secondAttribute="centerY" id="0gv-cL-8qm"/>
-                            <constraint firstItem="SGE-78-ZAV" firstAttribute="centerX" secondItem="NCX-OV-37c" secondAttribute="centerX" id="XGv-L4-0pL"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ljB-Z6-C7u"/>
                     </view>
                     <navigationItem key="navigationItem" id="aof-M7-mdR"/>
-                    <connections>
-                        <outlet property="mClickMeBtn" destination="SGE-78-ZAV" id="OHx-9Y-p8L"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1o-wd-ajT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -801,21 +788,7 @@
                     <view key="view" contentMode="scaleToFill" id="o1f-gk-XJZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cI-2a-19t">
-                                <rect key="frame" x="0.0" y="64" width="375" height="46"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="Z7l-mO-nHf"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="9cI-2a-19t" firstAttribute="top" secondItem="g9M-O7-rH4" secondAttribute="top" id="9LT-gY-dpu"/>
-                            <constraint firstItem="g9M-O7-rH4" firstAttribute="trailing" secondItem="9cI-2a-19t" secondAttribute="trailing" id="ce0-ym-mvz"/>
-                            <constraint firstItem="9cI-2a-19t" firstAttribute="leading" secondItem="g9M-O7-rH4" secondAttribute="leading" id="eCO-wC-mJK"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g9M-O7-rH4"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Bb-EG-Gty"/>

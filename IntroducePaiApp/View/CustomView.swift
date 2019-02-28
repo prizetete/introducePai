@@ -7,16 +7,8 @@
 //
 
 import UIKit
-import Alamofire
 
 class CustomView: NSObject, UIGestureRecognizerDelegate {
-    
-    //    private var mBGBlack: UIView!
-    //    private var mView: UIView!
-    //    private var mTouchBar: UIView!
-    //    private var mContentView: UIView!
-    private var oAPIDriver: APIDriver!
-    
     
     private var mBGBlack: UIView = {
         let mView = UIView()
@@ -59,36 +51,6 @@ class CustomView: NSObject, UIGestureRecognizerDelegate {
     
     override init() {
         super.init()
-        //        self.oAPIDriver = APIDriver()
-        //        self.oAPIDriver.setURL(sURL: "pts_search")
-        //        self.oAPIDriver.setParamenters(axParamenters: [
-        //            "keyword" : "topic",
-        //            "page" : 1
-        //        ])
-        //        self.oAPIDriver.getDataRetryMethod(Method: .post, callbackSuccess: { (axData) in
-        //            print(axData)
-        //        }) { (err) in
-        //            print("err: \(err)")
-        //        }
-        
-        self.oAPIDriver = APIDriver()
-        self.oAPIDriver.setFullURL(sURL: "https://api.myjson.com/bins/ysiha")
-//        self.oAPIDriver.setParamenters(axParamenters: [
-////            "name": "morpheus",
-//            //            "job": "leader"
-//            :
-//        ])
-        self.oAPIDriver.getDataRetryMethod(Method: .get, callbackSuccess: { (axData) in
-            print("get Data: \(axData)")
-        }) { (err) in
-            print("err ja: \(err)")
-        }
-        
-        //        self.mBGBlack = UIView()
-        //        self.mView = UIView()
-        //        self.mTouchBar = UIView()
-        //        self.mContentView = UIView()
-        
         self.mCustomTable = CustomTableController()
         self.mCustomTable.oCustomView = self
         self.fHeightTop = UIApplication.shared.statusBarFrame.height - 4.0

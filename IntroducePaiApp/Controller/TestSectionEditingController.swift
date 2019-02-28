@@ -174,13 +174,25 @@ class TestSectionEditingController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
+    private func swapOrder() {
+        
+    }
+    
+//    func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+//        print("destination: \(proposedDestinationIndexPath.row) => source: \(sourceIndexPath.row)")
+//
+//        return proposedDestinationIndexPath
+//    }
+    
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
-        print("source: \(sourceIndexPath.row) => destination: \(destinationIndexPath.row)")
+        let axFavData = self.axFavoriteClub[sourceIndexPath.row]
+        let axTempData = PantipViewModel.ClubData(sClubID: axFavData.sClubID, sClubName: axFavData.sClubName)
+        self.axFavoriteClub.remove(at: sourceIndexPath.row)
+        self.axFavoriteClub.insert(axTempData, at: destinationIndexPath.row)
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
