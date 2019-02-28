@@ -15,7 +15,6 @@ class HeaderForCollectionView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("setupHeader")
         self.mView = UIView()
         self.mLabel = UILabel()
         
