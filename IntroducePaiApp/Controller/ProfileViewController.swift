@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
             layout.scrollDirection = .horizontal
             layout.minimumLineSpacing = 0.0
             let mCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-            mCollectionView.backgroundColor = .black
+            mCollectionView.backgroundColor = .white
             mCollectionView.dataSource = self
             mCollectionView.delegate = self
             mCollectionView.showsHorizontalScrollIndicator = false
@@ -54,9 +54,9 @@ class ProfileViewController: UIViewController {
     func configurePageControl() {
         self.mPageControl.numberOfPages = 3
         self.mPageControl.currentPage = 0
-        self.mPageControl.alpha = 0.5
+        self.mPageControl.alpha = 0.75
         self.mPageControl.tintColor = UIColor.black
-        self.mPageControl.pageIndicatorTintColor = UIColor.white
+        self.mPageControl.pageIndicatorTintColor = UIColor.gray
         self.mPageControl.currentPageIndicatorTintColor = UIColor.black
     }
     
@@ -97,8 +97,7 @@ class ProfileViewController: UIViewController {
         self.mCollectionView.bottomAnchor.constraint(equalTo: self.mView.bottomAnchor).isActive = true
         
         self.mPageControl.centerXAnchor.constraint(equalTo: self.mView.centerXAnchor).isActive = true
-        self.mPageControl.bottomAnchor.constraint(equalTo: self.mView.bottomAnchor, constant: -8.0).isActive = true
-        
+        self.mPageControl.bottomAnchor.constraint(equalTo: self.mView.bottomAnchor, constant: 0.0).isActive = true
     }
     
     private func setHideBackButton() {
@@ -118,6 +117,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.mCollectionView.dequeueReusableCell(withReuseIdentifier: "\(self.sCellID)\(indexPath.item)", for: indexPath) as! PageCell
+//        cell.contentView.backgroundColor = .white
         if indexPath.item == 0 {
             cell.contentView.backgroundColor = .red
         } else if indexPath.item == 1 {
@@ -125,7 +125,6 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         } else {
             cell.contentView.backgroundColor = .green
         }
-        
         return cell
     }
     

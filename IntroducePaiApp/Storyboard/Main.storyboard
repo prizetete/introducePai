@@ -694,10 +694,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SJ-yi-DF0">
-                                        <rect key="frame" x="8" y="8" width="359" height="538"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Name" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDM-4Z-Mtz">
-                                                <rect key="frame" x="8" y="112" width="343" height="30"/>
+                                                <rect key="frame" x="8" y="112" width="359" height="30"/>
                                                 <color key="backgroundColor" red="0.77647058820000003" green="0.23137254900000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="3uV-si-AaZ"/>
@@ -706,7 +706,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Address" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBT-ih-rqe">
-                                                <rect key="frame" x="8" y="146" width="343" height="70"/>
+                                                <rect key="frame" x="8" y="146" width="359" height="70"/>
                                                 <color key="backgroundColor" red="0.87058823529999996" green="0.2901960784" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="nb6-MY-qeW"/>
@@ -715,14 +715,14 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2DX-PC-XQl">
-                                                <rect key="frame" x="129.5" y="8" width="100" height="100"/>
+                                                <rect key="frame" x="137.5" y="8" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="QYh-Dt-xeH"/>
                                                     <constraint firstAttribute="height" constant="100" id="rUP-op-dfG"/>
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2A-JX-VTC">
-                                                <rect key="frame" x="8" y="220" width="343" height="30"/>
+                                                <rect key="frame" x="8" y="220" width="359" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.90118838030000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="3TN-vb-Ib7"/>
@@ -751,11 +751,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="3SJ-yi-DF0" secondAttribute="bottom" constant="8" id="A12-oF-QXC"/>
+                                    <constraint firstAttribute="bottom" secondItem="3SJ-yi-DF0" secondAttribute="bottom" id="A12-oF-QXC"/>
                                     <constraint firstItem="3SJ-yi-DF0" firstAttribute="centerX" secondItem="dLq-Wd-gMQ" secondAttribute="centerX" id="DaG-0L-GSH"/>
-                                    <constraint firstAttribute="trailing" secondItem="3SJ-yi-DF0" secondAttribute="trailing" constant="8" id="Fxs-qE-AYY"/>
-                                    <constraint firstItem="3SJ-yi-DF0" firstAttribute="leading" secondItem="dLq-Wd-gMQ" secondAttribute="leading" constant="8" id="RgA-4D-ivl"/>
-                                    <constraint firstItem="3SJ-yi-DF0" firstAttribute="top" secondItem="dLq-Wd-gMQ" secondAttribute="top" constant="8" id="TVP-40-F4D"/>
+                                    <constraint firstAttribute="trailing" secondItem="3SJ-yi-DF0" secondAttribute="trailing" id="Fxs-qE-AYY"/>
+                                    <constraint firstItem="3SJ-yi-DF0" firstAttribute="leading" secondItem="dLq-Wd-gMQ" secondAttribute="leading" id="RgA-4D-ivl"/>
+                                    <constraint firstItem="3SJ-yi-DF0" firstAttribute="top" secondItem="dLq-Wd-gMQ" secondAttribute="top" id="TVP-40-F4D"/>
                                     <constraint firstItem="3SJ-yi-DF0" firstAttribute="centerY" secondItem="dLq-Wd-gMQ" secondAttribute="centerY" id="q0x-Za-GDC"/>
                                 </constraints>
                             </view>
