@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
     
     private var mView: UIView = UIView()
     private var mCollectionView: UICollectionView!
-    private var mPageControl: UIPageControl = UIPageControl()
+    var mPageControl: UIPageControl = UIPageControl()
     
     private var sCellID: String = "PageCell"
     
@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
         self.setupCollection()
         self.setupView()
         self.setHideBackButton()
-        
     }
     
     private func setupCollection() {
@@ -117,13 +116,16 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.mCollectionView.dequeueReusableCell(withReuseIdentifier: "\(self.sCellID)\(indexPath.item)", for: indexPath) as! PageCell
-//        cell.contentView.backgroundColor = .white
+        cell.contentView.backgroundColor = .white
         if indexPath.item == 0 {
-            cell.contentView.backgroundColor = .red
+            cell.mLabel.text = "Personal Information"
+            cell.mTextView.text = "- Date of Birth : 20 May 1994\n- Age               : 24\n- Height           : 171\n- Weight          : 62\n- Nationality    : Thai\n- Sex               : Male\n- Religion        : Buddhism\n"
         } else if indexPath.item == 1 {
-            cell.contentView.backgroundColor = .blue
+            cell.mLabel.text = "Language & Skills"
+            cell.mTextView.text = "Thai: Native\nEnglish: Intermediate\nProgramming Language: Swift, HTML, PHP, Javascript(Basic), CSS(Basic)\nTools: Xcode, Git Version Control, MongoDB"
         } else {
-            cell.contentView.backgroundColor = .green
+            cell.mLabel.text = "Education & Working Experience"
+            cell.mTextView.text = "King Mongkut's University Technology North Bangkok (2012-2016)\nBachelor of Science,Computer Science\nGPA: 2.87\n\n- Internship at Internet Marketing Co., Ltd (Pantip.com) (May 2015 - Dec 2015)\n - Internet Marketing Co., Ltd (Pantip.com) (July 2016 - Present)"
         }
         return cell
     }
@@ -140,7 +142,6 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         let visibleRect = CGRect(origin: self.mCollectionView.contentOffset, size: self.mCollectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         let visibleIndexPath = self.mCollectionView.indexPathForItem(at: visiblePoint)
-        print("scoll: \(visibleIndexPath?.item)")
         self.mPageControl.currentPage = visibleIndexPath?.item ?? 0
     }
     
@@ -148,13 +149,47 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
 
 class PageCell: UICollectionViewCell {
     
+    private var mView: UIView = UIView()
+    var mLabel: UILabel = UILabel()
+    var mTextView: UITextView = UITextView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
     }
     
     private func setupView() {
-        print("123")
+        self.addSubview(self.mView)
+        self.mView.addSubview(self.mLabel)
+        self.mView.addSubview(self.mTextView)
+        
+        self.mView.translatesAutoresizingMaskIntoConstraints = false
+        self.mView.backgroundColor = .clear //.red
+        
+        self.mLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.mLabel.backgroundColor = .black
+        self.mLabel.textAlignment = .center
+        self.mLabel.font = UIFont(name: "HelveticNeue-Bold", size: 30.0)
+        self.mLabel.textColor = UIColor.white.withAlphaComponent(0.75)
+        
+        self.mTextView.translatesAutoresizingMaskIntoConstraints = false
+        self.mTextView.backgroundColor = .clear //.blue
+        self.mTextView.isEditable = false
+        
+        self.mView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        self.mView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.mView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        self.mView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        self.mLabel.leftAnchor.constraint(equalTo: self.mView.leftAnchor).isActive = true
+        self.mLabel.rightAnchor.constraint(equalTo: self.mView.rightAnchor).isActive = true
+        self.mLabel.centerXAnchor.constraint(equalTo: self.mView.centerXAnchor).isActive = true
+        self.mLabel.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        
+        self.mTextView.topAnchor.constraint(equalTo: self.mView.topAnchor, constant: 58.0).isActive = true
+        self.mTextView.leftAnchor.constraint(equalTo: self.mView.leftAnchor, constant: 8.0).isActive = true
+        self.mTextView.rightAnchor.constraint(equalTo: self.mView.rightAnchor, constant: -8.0).isActive = true
+        self.mTextView.bottomAnchor.constraint(equalTo: self.mView.bottomAnchor, constant: -32.0).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
