@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41D08E626B32E761C9C544F3 /* Pods_IntroducePaiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A83976D90850F2B6A05E7CD /* Pods_IntroducePaiApp.framework */; };
+		6702E162222FC76100D04B38 /* AlbumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6702E161222FC76100D04B38 /* AlbumCollection.swift */; };
 		672840D32204247900A47DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840D22204247900A47DE1 /* AppDelegate.swift */; };
 		672840DB2204247900A47DE1 /* IntroducePaiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 672840D92204247900A47DE1 /* IntroducePaiApp.xcdatamodeld */; };
 		672840DD2204247C00A47DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672840DC2204247C00A47DE1 /* Assets.xcassets */; };
@@ -22,7 +23,7 @@
 		672840F62204272800A47DE1 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840EE2204272800A47DE1 /* CustomView.swift */; };
 		672840F82204276000A47DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672840F72204275F00A47DE1 /* Main.storyboard */; };
 		672840FA22043E0600A47DE1 /* APIDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840F922043E0600A47DE1 /* APIDriver.swift */; };
-		67284100220ABD9E00A47DE1 /* ReorderableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840FF220ABD9E00A47DE1 /* ReorderableController.swift */; };
+		67284100220ABD9E00A47DE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840FF220ABD9E00A47DE1 /* ViewController.swift */; };
 		67284102220ABE4300A47DE1 /* ReorderableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67284101220ABE4300A47DE1 /* ReorderableCell.swift */; };
 		672E4C46222518B0007D60E5 /* Pantip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E4C45222518B0007D60E5 /* Pantip.swift */; };
 		672E4C482225197A007D60E5 /* PantipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E4C472225197A007D60E5 /* PantipViewModel.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		1A83976D90850F2B6A05E7CD /* Pods_IntroducePaiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntroducePaiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBCCD8CAA816233AE941AC3 /* Pods-IntroducePaiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroducePaiApp.release.xcconfig"; path = "Target Support Files/Pods-IntroducePaiApp/Pods-IntroducePaiApp.release.xcconfig"; sourceTree = "<group>"; };
+		6702E161222FC76100D04B38 /* AlbumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollection.swift; sourceTree = "<group>"; };
 		672840CF2204247900A47DE1 /* IntroducePaiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroducePaiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672840D22204247900A47DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		672840DA2204247900A47DE1 /* IntroducePaiApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IntroducePaiApp.xcdatamodel; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		672840EE2204272800A47DE1 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		672840F72204275F00A47DE1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		672840F922043E0600A47DE1 /* APIDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDriver.swift; sourceTree = "<group>"; };
-		672840FF220ABD9E00A47DE1 /* ReorderableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderableController.swift; sourceTree = "<group>"; };
+		672840FF220ABD9E00A47DE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		67284101220ABE4300A47DE1 /* ReorderableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderableCell.swift; sourceTree = "<group>"; };
 		672E4C45222518B0007D60E5 /* Pantip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pantip.swift; sourceTree = "<group>"; };
 		672E4C472225197A007D60E5 /* PantipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantipViewModel.swift; sourceTree = "<group>"; };
@@ -112,12 +114,13 @@
 				672840E72204272700A47DE1 /* CustomTableController.swift */,
 				672840EC2204272800A47DE1 /* MainViewController.swift */,
 				672840EA2204272700A47DE1 /* ProfileViewController.swift */,
-				672840FF220ABD9E00A47DE1 /* ReorderableController.swift */,
+				672840FF220ABD9E00A47DE1 /* ViewController.swift */,
 				672840E92204272700A47DE1 /* SettingController.swift */,
 				672840E82204272700A47DE1 /* TabbarController.swift */,
 				672840EB2204272800A47DE1 /* TestCustomViewController.swift */,
 				67C87A18220C0EC70063396A /* TestSectionEditingController.swift */,
 				6730B67A2223DDBC003D82BF /* YoutubeFeedController.swift */,
+				6702E161222FC76100D04B38 /* AlbumCollection.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -354,10 +357,11 @@
 				672840F52204272800A47DE1 /* CalculatorController.swift in Sources */,
 				672840F02204272800A47DE1 /* TabbarController.swift in Sources */,
 				672840D32204247900A47DE1 /* AppDelegate.swift in Sources */,
-				67284100220ABD9E00A47DE1 /* ReorderableController.swift in Sources */,
+				67284100220ABD9E00A47DE1 /* ViewController.swift in Sources */,
 				6730B6852223E809003D82BF /* Youtube.swift in Sources */,
 				6730B67F2223DF03003D82BF /* YoutubeFeedCell.swift in Sources */,
 				672E4C482225197A007D60E5 /* PantipViewModel.swift in Sources */,
+				6702E162222FC76100D04B38 /* AlbumCollection.swift in Sources */,
 				67284102220ABE4300A47DE1 /* ReorderableCell.swift in Sources */,
 				672E4C4C2226325C007D60E5 /* NoDataCell.swift in Sources */,
 			);
