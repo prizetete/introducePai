@@ -5,4 +5,5 @@ inhibit_all_warnings!
 target "IntroducePaiApp" do
     pod 'Alamofire', '4.8.1', :inhibit_warnings => true
     pod 'Kingfisher', '4.10.1', :inhibit_warnings => true
+    pod 'RealmSwift', '3.13.1', :inhibit_warnings => true
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TestSectionEditingController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,6 +17,7 @@ class TestSectionEditingController: UIViewController, UITableViewDelegate, UITab
     private var axFavoriteClub: [PantipViewModel.ClubData]!
     private var iNumRow: Int!
     private var iNumFavRow: Int!
+    private let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +33,46 @@ class TestSectionEditingController: UIViewController, UITableViewDelegate, UITab
         self.iNumRow = 0
         self.iNumFavRow = 0
         self.setDefault()
-        self.oPantipViewModel = PantipViewModel()
-        self.oPantipViewModel.delegate = self
-        self.oPantipViewModel.getPantipClub()
-        print("Order Editing")
+        
+        self.FeedFavoriteClub()
+        self.FeedClubNormal()
     }
+    
+    private func FeedFavoriteClub() {
+        let oFavRealm = self.realm.objects(clubFavorite.self)
+        if oFavRealm.isEmpty {
+            self.axFavoriteClub = []
+        } else {
+            for oTemp in oFavRealm {
+                self.axFavoriteClub.append(PantipViewModel.ClubData(sClubID: oTemp.clubID, sClubName: oTemp.clubName))
+            }
+            self.iNumFavRow = self.axFavoriteClub.count
+            self.mTableView.reloadSections(IndexSet(integer: 0), with: .fade)
+        }
+    }
+    
+    private func FeedClubNormal() {
+        let oRealmClubData = self.realm.objects(clubData.self)
+        if oRealmClubData.isEmpty {
+            self.oPantipViewModel = PantipViewModel()
+            self.oPantipViewModel.delegate = self
+            self.oPantipViewModel.getPantipClub()
+        } else {
+            for oTemp in oRealmClubData {
+                self.axDataClub.append(PantipViewModel.ClubData(sClubID: oTemp.clubID, sClubName: oTemp.clubName))
+            }
+            self.iNumRow = self.axDataClub.count
+            
+            for axData in self.axFavoriteClub {
+                if let idx = self.axDataClub.index(where: {$0.sClubName == axData.sClubName}) {
+                    self.axDataClub.remove(at: idx)
+                    self.iNumRow = self.iNumRow - 1
+                }
+            }
+            self.mTableView.reloadSections(IndexSet(integer: 1), with: .fade)
+        }
+    }
+    
     
     private func setDefault() {
         self.mTableView.register(UINib(nibName: "NoDataCell", bundle: nil), forCellReuseIdentifier: "NoDataCell")
@@ -77,7 +114,7 @@ class TestSectionEditingController: UIViewController, UITableViewDelegate, UITab
         mLabel.leftAnchor.constraint(equalTo: mView.leftAnchor, constant: 16.0).isActive = true
         mLabel.centerYAnchor.constraint(equalTo: mView.centerYAnchor).isActive = true
         mLabel.text = iSection == 0 ? "ปักหมุด" : "คลับอื่น"
-        //        mLabel.textColor = UIColor(named: "#CCCCCC")
+        
         mButton.rightAnchor.constraint(equalTo: mView.rightAnchor, constant: -8.0).isActive = true
         mButton.centerYAnchor.constraint(equalTo: mView.centerYAnchor).isActive = true
         mButton.leftAnchor.constraint(equalTo: mLabel.rightAnchor, constant: 16.0).isActive = true
@@ -143,10 +180,22 @@ class TestSectionEditingController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .insert {
             let axData = self.axDataClub[indexPath.row]
+            try! self.realm.write {
+                let oFavClub = clubFavorite()
+                oFavClub.clubID = axData.sClubID
+                oFavClub.clubName = axData.sClubName
+                
+                let oFav = self.realm.objects(clubFavorite.self)
+                if oFav.isEmpty {
+                    self.realm.create(clubFavorite.self, value: oFavClub)
+                } else {
+                    self.realm.add(oFavClub)
+                }
+            }
             self.mTableView.beginUpdates()
             self.iNumRow = self.iNumRow - 1
             self.axDataClub.remove(at: indexPath.row)
-            
+
             self.iNumFavRow = self.iNumFavRow + 1
             self.axFavoriteClub.append(PantipViewModel.ClubData(sClubID: axData.sClubID, sClubName: axData.sClubName))
             if self.iNumFavRow == 1 {
@@ -154,35 +203,33 @@ class TestSectionEditingController: UIViewController, UITableViewDelegate, UITab
             } else {
                 self.mTableView.insertRows(at: [IndexPath(row: self.axFavoriteClub.count - 1, section: 0)], with: .fade)
             }
-            
+
             self.mTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 1)], with: .fade)
             self.mTableView.endUpdates()
         } else {
+            let oTempFav = self.axFavoriteClub[indexPath.row]
+            
             self.axFavoriteClub.remove(at: indexPath.row)
             self.iNumFavRow = self.iNumFavRow - 1
-            
+
             self.mTableView.beginUpdates()
             if self.iNumFavRow == 0 {
                 self.mTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
             } else {
                 self.mTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
             }
-            
-            self.oPantipViewModel.getPantipClub()
             self.mTableView.endUpdates()
-            print("delete")
+            
+            
+            let oDelFav = self.realm.objects(clubFavorite.self).filter("clubID == %@ AND clubName == %@", oTempFav.sClubID, oTempFav.sClubName)
+            try! self.realm.write {
+                self.realm.delete(oDelFav)
+                let oRealmClubData = self.realm.objects(clubData.self)
+                self.realm.delete(oRealmClubData)
+                self.FeedClubNormal()
+            }
         }
     }
-    
-    private func swapOrder() {
-        
-    }
-    
-//    func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
-//        print("destination: \(proposedDestinationIndexPath.row) => source: \(sourceIndexPath.row)")
-//
-//        return proposedDestinationIndexPath
-//    }
     
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -193,6 +240,21 @@ class TestSectionEditingController: UIViewController, UITableViewDelegate, UITab
         let axTempData = PantipViewModel.ClubData(sClubID: axFavData.sClubID, sClubName: axFavData.sClubName)
         self.axFavoriteClub.remove(at: sourceIndexPath.row)
         self.axFavoriteClub.insert(axTempData, at: destinationIndexPath.row)
+        
+        try! self.realm.write {
+            self.realm.delete(self.realm.objects(clubFavorite.self))
+            for oTempFav in self.axFavoriteClub {
+                let oFav = clubFavorite()
+                oFav.clubID = oTempFav.sClubID
+                oFav.clubName = oTempFav.sClubName
+                
+                if self.realm.objects(clubFavorite.self).isEmpty {
+                    self.realm.create(clubFavorite.self, value: oFav)
+                } else {
+                    self.realm.add(oFav)
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -212,8 +274,10 @@ class TestSectionEditingController: UIViewController, UITableViewDelegate, UITab
     }
     
     @objc func editOrder() {
+//        try! self.realm.write {
+//            self.realm.deleteAll()
+//        }
         self.mTableView.isEditing = !self.mTableView.isEditing
-        //        self.mTableView.reloadSections(IndexSet(integer: 0), with: .fade)
         self.mTableView.reloadData()
     }
 }
@@ -223,9 +287,23 @@ extension TestSectionEditingController: PantipViewModelDelegate {
         self.axDataClub = axData
         self.iNumRow = iNumRow
         
+        for ooo in axDataClub {
+            let oClub = clubData()
+            oClub.clubID = ooo.sClubID
+            oClub.clubName = ooo.sClubName
+            
+            let ooo = self.realm.objects(clubData.self).isEmpty
+            try! self.realm.write {
+                if ooo {
+                    self.realm.create(clubData.self, value: oClub)
+                } else {
+                    self.realm.add(oClub)
+                }
+            }
+
+        }
         for axData in self.axFavoriteClub {
             if let idx = self.axDataClub.index(where: {$0.sClubName == axData.sClubName}) {
-                print("remove: \(axData.sClubName)")
                 self.axDataClub.remove(at: idx)
                 self.iNumRow = self.iNumRow - 1
             }
@@ -234,3 +312,15 @@ extension TestSectionEditingController: PantipViewModelDelegate {
         self.mTableView.reloadSections(IndexSet(integer: 1), with: .fade)
     }
 }
+
+class clubData: Object {
+    @objc dynamic var clubName = ""
+    @objc dynamic var clubID = ""
+}
+
+class clubFavorite: Object {
+    @objc dynamic var clubName = ""
+    @objc dynamic var clubID = ""
+}
+
+

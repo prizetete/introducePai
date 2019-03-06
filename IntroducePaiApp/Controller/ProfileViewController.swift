@@ -125,7 +125,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             cell.mTextView.text = "Thai: Native\nEnglish: Intermediate\nProgramming Language: Swift, HTML, PHP, Javascript(Basic), CSS(Basic)\nTools: Xcode, Git Version Control, MongoDB"
         } else {
             cell.mLabel.text = "Education & Working Experience"
-            cell.mTextView.text = "King Mongkut's University Technology North Bangkok (2012-2016)\nBachelor of Science,Computer Science\nGPA: 2.87\n\n- Internship at Internet Marketing Co., Ltd (Pantip.com) (May 2015 - Dec 2015)\n - Internet Marketing Co., Ltd (Pantip.com) (July 2016 - Present)"
+            cell.mTextView.text = "King Mongkut's University Technology North Bangkok (2012-2016)\nBachelor of Science,Computer Science\nGPA: 2.87\n\n- Internship at Internet Marketing Co., Ltd (Pantip.com)\n(May 2015 - Dec 2015)\n - Internet Marketing Co., Ltd (Pantip.com)\n(July 2016 - Present)"
         }
         return cell
     }
@@ -196,3 +196,6 @@ class PageCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+
+
