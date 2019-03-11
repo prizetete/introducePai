@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41D08E626B32E761C9C544F3 /* Pods_IntroducePaiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A83976D90850F2B6A05E7CD /* Pods_IntroducePaiApp.framework */; };
 		6702E162222FC76100D04B38 /* AlbumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6702E161222FC76100D04B38 /* AlbumCollection.swift */; };
+		6727B1DA22320CB400CE67C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6727B1D922320CB300CE67C5 /* GoogleService-Info.plist */; };
 		672840D32204247900A47DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840D22204247900A47DE1 /* AppDelegate.swift */; };
 		672840DB2204247900A47DE1 /* IntroducePaiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 672840D92204247900A47DE1 /* IntroducePaiApp.xcdatamodeld */; };
 		672840DD2204247C00A47DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672840DC2204247C00A47DE1 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		1A83976D90850F2B6A05E7CD /* Pods_IntroducePaiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntroducePaiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBCCD8CAA816233AE941AC3 /* Pods-IntroducePaiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroducePaiApp.release.xcconfig"; path = "Target Support Files/Pods-IntroducePaiApp/Pods-IntroducePaiApp.release.xcconfig"; sourceTree = "<group>"; };
 		6702E161222FC76100D04B38 /* AlbumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollection.swift; sourceTree = "<group>"; };
+		6727B1D922320CB300CE67C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		672840CF2204247900A47DE1 /* IntroducePaiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroducePaiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672840D22204247900A47DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		672840DA2204247900A47DE1 /* IntroducePaiApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IntroducePaiApp.xcdatamodel; sourceTree = "<group>"; };
@@ -147,7 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				672840E12204247C00A47DE1 /* Info.plist */,
+				6727B1D922320CB300CE67C5 /* GoogleService-Info.plist */,
 				672840D92204247900A47DE1 /* IntroducePaiApp.xcdatamodeld */,
+				672840D22204247900A47DE1 /* AppDelegate.swift */,
 				672E4C442224F8D0007D60E5 /* All */,
 				671F23B2221AA1A70021DDCA /* Controller */,
 				6730B6812223E695003D82BF /* Model */,
@@ -162,7 +166,6 @@
 		672E4C442224F8D0007D60E5 /* All */ = {
 			isa = PBXGroup;
 			children = (
-				672840D22204247900A47DE1 /* AppDelegate.swift */,
 				672840DC2204247C00A47DE1 /* Assets.xcassets */,
 			);
 			path = All;
@@ -277,6 +280,7 @@
 				672840DD2204247C00A47DE1 /* Assets.xcassets in Resources */,
 				672840F82204276000A47DE1 /* Main.storyboard in Resources */,
 				672E4C4A2226324B007D60E5 /* NoDataCell.xib in Resources */,
+				6727B1DA22320CB400CE67C5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,18 +297,28 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-IntroducePaiApp/Pods-IntroducePaiApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MyOwnExt/MyOwnExt.framework",
+				"${BUILT_PRODUCTS_DIR}/PaiExt/PaiExt.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MyOwnExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaiExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MyOwnExt
+
 
 class ProfileViewController: UIViewController {
     
@@ -165,6 +167,9 @@ class PageCell: UICollectionViewCell {
         
         self.mView.translatesAutoresizingMaskIntoConstraints = false
         self.mView.backgroundColor = .clear //.red
+//        self.mView.setBorderColor()
+//        self.mView.setYellowBorder(fBorderWidth: 6.0)
+        self.mView.setYellowBorder(fBorderWidth: 5.0)
         
         self.mLabel.translatesAutoresizingMaskIntoConstraints = false
         self.mLabel.backgroundColor = .black

@@ -70,8 +70,10 @@ extension YoutubeFeedController: UITableViewDelegate, UITableViewDataSource {
         let urlProfile = URL(string: oData.img_profile_url)
         cell.mProfileImgView.kf.setImage(with: urlProfile)
         
-        let urlCover = URL(string: oData.img_cover)
-        cell.mCoverImage.kf.setImage(with: urlCover)
+//        let urlCover = URL(string: oData.img_cover)
+//        cell.mCoverImage.kf.setImage(with: urlCover)
+        let resource = ImageResource(downloadURL: URL(string: oData.img_cover)!, cacheKey: oData.img_cover)
+        cell.mCoverImage.kf.setImage(with: resource)
         
         cell.mVDOTimeLabel.text = oData.limit_time
         cell.mVDOTimeLabel.layer.cornerRadius = 7.0

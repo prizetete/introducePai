@@ -1,6 +1,70 @@
 PODS:
   - Alamofire (4.8.1)
+  - Firebase/Core (5.18.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.7.0)
+  - Firebase/CoreOnly (5.18.0):
+    - FirebaseCore (= 5.3.1)
+  - Firebase/Messaging (5.18.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.3.2)
+  - FirebaseAnalytics (5.7.0):
+    - FirebaseCore (~> 5.3)
+    - FirebaseInstanceID (~> 3.6)
+    - GoogleAppMeasurement (= 5.7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - FirebaseAnalyticsInterop (1.2.0)
+  - FirebaseCore (5.3.1):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseInstanceID (3.7.0):
+    - FirebaseCore (~> 5.2)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/UserDefaults (~> 5.2)
+  - FirebaseMessaging (3.3.2):
+    - FirebaseAnalyticsInterop (~> 1.1)
+    - FirebaseCore (~> 5.2)
+    - FirebaseInstanceID (~> 3.6)
+    - GoogleUtilities/Environment (~> 5.3)
+    - GoogleUtilities/Reachability (~> 5.3)
+    - GoogleUtilities/UserDefaults (~> 5.3)
+    - Protobuf (~> 3.1)
+  - GoogleAppMeasurement (5.7.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (5.3.7):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.3.7)
+  - GoogleUtilities/Logger (5.3.7):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.3.7):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.3.7):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.3.7)"
+  - GoogleUtilities/Reachability (5.3.7):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.3.7):
+    - GoogleUtilities/Logger
   - Kingfisher (4.10.1)
+  - MyOwnExt (0.2.0)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
+  - PaiExt (0.3.0)
+  - Protobuf (3.7.0)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
   - Realm/Headers (3.13.1)
@@ -9,22 +73,50 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.8.1)
+  - Firebase/Core (= 5.18.0)
+  - Firebase/Messaging (= 5.18.0)
   - Kingfisher (= 4.10.1)
+  - MyOwnExt
+  - PaiExt (= 0.3.0)
   - RealmSwift (= 3.13.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
+    - FirebaseCore
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - Kingfisher
+    - MyOwnExt
+    - nanopb
+    - PaiExt
+    - Protobuf
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Firebase: 02f3281965c075426141a0ce1277e9de6649cab9
+  FirebaseAnalytics: 23851fe602c872130a2c5c55040b302120346cc2
+  FirebaseAnalyticsInterop: efbe45c8385ec626e29f9525e5ebd38520dfb6c1
+  FirebaseCore: 52f851b30e11360f1e67cf04b1edfebf0a47a2d3
+  FirebaseInstanceID: bd6fc5a258884e206fd5c474ebe4f5b00e21770e
+  FirebaseMessaging: d740150547f7686b33799f6489f5b69a4706631b
+  GoogleAppMeasurement: 6cf307834da065863f9faf4c0de0a936d81dd832
+  GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MyOwnExt: b67814c73127eb56cc80241d76e00e0324c9328a
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PaiExt: 07cf35b6c43280698df246b5819f3c16faa6eb4e
+  Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
 
-PODFILE CHECKSUM: ea679caee4ba2db5d60c3c907b4f0eb4555e153c
+PODFILE CHECKSUM: 0633f8260b30033402e489f70d0c39c6b08a4278
 
 COCOAPODS: 1.6.0

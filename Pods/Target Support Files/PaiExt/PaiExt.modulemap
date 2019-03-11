@@ -1,0 +1,6 @@
+framework module PaiExt {
+  umbrella header "PaiExt-umbrella.h"
+
+  export *
+  module * { export * }
+}
