@@ -63,7 +63,6 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - PaiExt (0.3.0)
   - Protobuf (3.7.0)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
@@ -77,7 +76,6 @@ DEPENDENCIES:
   - Firebase/Messaging (= 5.18.0)
   - Kingfisher (= 4.10.1)
   - MyOwnExt
-  - PaiExt (= 0.3.0)
   - RealmSwift (= 3.13.1)
 
 SPEC REPOS:
@@ -94,7 +92,6 @@ SPEC REPOS:
     - Kingfisher
     - MyOwnExt
     - nanopb
-    - PaiExt
     - Protobuf
     - Realm
     - RealmSwift
@@ -112,11 +109,10 @@ SPEC CHECKSUMS:
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MyOwnExt: b67814c73127eb56cc80241d76e00e0324c9328a
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  PaiExt: 07cf35b6c43280698df246b5819f3c16faa6eb4e
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
 
-PODFILE CHECKSUM: 0633f8260b30033402e489f70d0c39c6b08a4278
+PODFILE CHECKSUM: 7299e2e502ad79e60fdf4b162c2120d57bac4fb8
 
 COCOAPODS: 1.6.0
