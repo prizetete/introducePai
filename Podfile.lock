@@ -57,11 +57,13 @@ PODS:
   - GoogleUtilities/UserDefaults (5.3.7):
     - GoogleUtilities/Logger
   - Kingfisher (4.10.1)
+  - MyOwnExt (0.2.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - PaiExt (0.3.0)
   - Protobuf (3.7.0)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
@@ -74,6 +76,8 @@ DEPENDENCIES:
   - Firebase/Core (= 5.18.0)
   - Firebase/Messaging (= 5.18.0)
   - Kingfisher (= 4.10.1)
+  - MyOwnExt
+  - PaiExt (= 0.3.0)
   - RealmSwift (= 3.13.1)
 
 SPEC REPOS:
@@ -88,7 +92,9 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - Kingfisher
+    - MyOwnExt
     - nanopb
+    - PaiExt
     - Protobuf
     - Realm
     - RealmSwift
@@ -104,11 +110,13 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 6cf307834da065863f9faf4c0de0a936d81dd832
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MyOwnExt: b67814c73127eb56cc80241d76e00e0324c9328a
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PaiExt: 07cf35b6c43280698df246b5819f3c16faa6eb4e
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
 
-PODFILE CHECKSUM: 907ec8e8e1e48dc53941dd40d1e7b77ccc2458a8
+PODFILE CHECKSUM: 0633f8260b30033402e489f70d0c39c6b08a4278
 
 COCOAPODS: 1.6.0

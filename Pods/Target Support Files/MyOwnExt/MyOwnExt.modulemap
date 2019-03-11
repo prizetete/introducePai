@@ -1,0 +1,6 @@
+framework module MyOwnExt {
+  umbrella header "MyOwnExt-umbrella.h"
+
+  export *
+  module * { export * }
+}
