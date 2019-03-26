@@ -28,7 +28,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50m-Jr-tEr">
                         <rect key="frame" x="0.0" y="250" width="418" height="74.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ivG-WB-gen">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ivG-WB-gen" customClass="Menusheet" customModule="IntroducePaiApp" customModuleProvider="target">
                                 <rect key="frame" x="8" y="0.0" width="34" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -115,7 +115,6 @@
                 <outlet property="mCoverImage" destination="yU3-Zc-I2H" id="wKV-a7-zmi"/>
                 <outlet property="mDescLabel" destination="eab-wr-D7T" id="b3y-EU-KTR"/>
                 <outlet property="mOptionBtn" destination="4JE-9n-VU9" id="duG-65-mDY"/>
-                <outlet property="mProfileImgView" destination="ivG-WB-gen" id="teF-6C-3tn"/>
                 <outlet property="mProfileView" destination="50m-Jr-tEr" id="PjQ-rt-3fR"/>
                 <outlet property="mTitleLabel" destination="enM-sf-5yF" id="eys-KJ-oQQ"/>
                 <outlet property="mVDOTimeLabel" destination="vV3-tt-RlJ" id="DRs-lB-WVp"/>

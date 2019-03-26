@@ -12,7 +12,7 @@ class YoutubeFeedCell: UITableViewCell {
 
     @IBOutlet weak var mCoverImage: UIImageView!
     @IBOutlet weak var mProfileView: UIView!
-    @IBOutlet weak var mProfileImgView: UIImageView!
+//    @IBOutlet weak var mProfileImgView: UIImageView!
     @IBOutlet weak var mContentView: UIView!
     @IBOutlet weak var mTitleLabel: UILabel!
     @IBOutlet weak var mDescLabel: UILabel!
@@ -33,7 +33,7 @@ class YoutubeFeedCell: UITableViewCell {
         
         self.mCoverImage.backgroundColor = UIColor.white.withAlphaComponent(0.35)
         self.mProfileView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
-        self.mProfileImgView.backgroundColor = UIColor.white.withAlphaComponent(0.35)
+//        self.mProfileImgView.backgroundColor = UIColor.white.withAlphaComponent(0.35)
         self.mContentView.backgroundColor = .clear
         self.mTitleLabel.backgroundColor = .clear //UIColor.black.withAlphaComponent(0.6)
         self.mDescLabel.backgroundColor = .clear //UIColor.black.withAlphaComponent(0.6)
@@ -51,8 +51,6 @@ class YoutubeFeedCell: UITableViewCell {
         self.mDescLabel.lineBreakMode = .byWordWrapping
         self.mDescLabel.numberOfLines = 2
         
-        self.mProfileImgView.clipsToBounds = true
-        self.mProfileImgView.layer.cornerRadius = 17.0
         
         self.mVDOTimeLabel.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         self.mVDOTimeLabel.textColor = UIColor.white

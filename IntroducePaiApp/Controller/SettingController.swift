@@ -12,6 +12,7 @@ class SettingController: UIViewController {
     
     private var mTableview: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavBarColor()
@@ -60,7 +61,9 @@ extension SettingController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 class SettingCell: UITableViewCell {
