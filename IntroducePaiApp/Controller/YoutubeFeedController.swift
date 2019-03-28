@@ -129,7 +129,7 @@ class Menusheet: UIImageView, UIGestureRecognizerDelegate {
         self.mEmotionView.backgroundColor = .white
         self.mEmotionView.layer.cornerRadius = 25.0
         
-        self.backgroundColor = .red
+        self.backgroundColor = .green
         self.clipsToBounds = true
         self.layer.cornerRadius = 17.0
         
