@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "539FD0AD0DF061993E3DCF7BA202B4A7"
+               BlueprintIdentifier = "FC3C4A2CB0F38CD7F708C2A81809FCA0"
+               BuildableName = "MyOwnExt.framework"
                BlueprintName = "MyOwnExt"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "MyOwnExt.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

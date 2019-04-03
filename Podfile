@@ -10,4 +10,5 @@ target "IntroducePaiApp" do
     pod 'Firebase/Messaging', '5.18.0', :inhibit_warnings => true
 #    pod 'PaiExt', '0.3.0', :inhibit_warnings => true
     pod 'MyOwnExt', :inhibit_warnings => true
+    pod 'PTTextField', :inhibit_warnings => true
 end
