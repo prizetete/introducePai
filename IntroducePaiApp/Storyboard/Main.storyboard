@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sSH-t7-bOd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sSH-t7-bOd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -736,10 +736,30 @@
                     <view key="view" contentMode="scaleToFill" id="o1f-gk-XJZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-ss-xXY" customClass="PTTextField" customModule="IntroducePaiApp" customModuleProvider="target">
+                                <rect key="frame" x="8" y="313.5" width="359" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Wx-Ya-oUo"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gk2-ss-xXY" firstAttribute="centerX" secondItem="o1f-gk-XJZ" secondAttribute="centerX" id="Lwr-SV-bER"/>
+                            <constraint firstItem="Gk2-ss-xXY" firstAttribute="leading" secondItem="g9M-O7-rH4" secondAttribute="leading" constant="8" id="fzg-5y-SXc"/>
+                            <constraint firstItem="Gk2-ss-xXY" firstAttribute="centerY" secondItem="o1f-gk-XJZ" secondAttribute="centerY" id="qOb-1i-WFv"/>
+                            <constraint firstItem="g9M-O7-rH4" firstAttribute="trailing" secondItem="Gk2-ss-xXY" secondAttribute="trailing" constant="8" id="qwr-6I-McG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g9M-O7-rH4"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Bb-EG-Gty"/>
+                    <connections>
+                        <outlet property="mPTTextField" destination="Gk2-ss-xXY" id="eWh-n4-9tf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etg-sj-Ycy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
